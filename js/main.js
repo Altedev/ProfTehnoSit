@@ -78,5 +78,12 @@ $(document).ready( function () {
         }
     });
 
+    $(document).on('click', '.contacts .btn', function (e) {
+        e.preventDefault();
+        console.log(123);
+        $(".pop").addClass('opened');
+        // $("body").removeClass('opened-pop');
+    })
+
 
 });

@@ -51,7 +51,7 @@ header {
   .md(padding-right, 0);
   font-weight: 600;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
   padding-top: 15px;
 
   .logo {
@@ -87,13 +87,13 @@ header {
         padding-left: 10px;
 
         a {
-          color: #c8c6c6;
+          color: #555;
 
           &:hover,
           &:active {
             color: #0d164a;
             font-weight: 600;
-            text-shadow: 0 0 0 #0d164a;
+            text-shadow: 1px 0 0 #0d164a;
             transition: 1s;
           }
         }
@@ -330,11 +330,31 @@ header {
       .sm(padding-right, 5px);
       .sm(padding-left, 5px);
       .md(margin-bottom, 5px);
+      z-index: 100;
       text-align: center;
       padding-bottom: 65px;
       padding-right: 40px;
       padding-left: 40px;
       
+      &:nth-child(1) {
+        &:hover {
+          color: #fff;
+          background: @color_blue;
+          background-image: linear-gradient(
+                  rgba(13, 22, 74, 0.8),
+                  rgba(13, 22, 74, 0.8)
+          ), url('..\images\advantage-time.png');
+
+          .image {
+            display: none;
+          }
+
+          .image.visible-none {
+            display: block;
+          }
+        }
+      }
+
       &:nth-child(2) {
         &:hover {
           color: #fff;
@@ -343,6 +363,25 @@ header {
                   rgba(13, 22, 74, 0.8),
                   rgba(13, 22, 74, 0.8)
           ), url('..\images\advantage-procent.png');
+
+          .image {
+            display: none;
+          }
+
+          .image.visible-none {
+            display: block;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        &:hover {
+          color: #fff;
+          background: @color_blue;
+          background-image: linear-gradient(
+                  rgba(13, 22, 74, 0.8),
+                  rgba(13, 22, 74, 0.8)
+          ), url('..\images\advantage-men.png');
 
           .image {
             display: none;
@@ -918,7 +957,7 @@ header {
 
       li {
         font-size: 18px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         position: relative;
 
         span {
@@ -1250,4 +1289,23 @@ header {
 //    }
 //  }
 //}
+
+.pop {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  z-index: 1000000;
+  left: -100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .9s;
+  transition: .9s;
+  visibility: hidden;
+  height: 100%;
+}
+.opened {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
 
