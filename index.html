@@ -10,6 +10,12 @@
 </head>
 <body>
 
+<div class="display-none">
+    <img src="images\icons\time-hover.png" alt="time">
+    <img src="images\icons\procent-hover.png" alt="time">
+    <img src="images\icons\men-hover.png" alt="time">
+</div>
+
 <div class="debug">
     <div>
         <div>
@@ -34,16 +40,16 @@
         <a href="#"><img src="images\logo.png" alt="Логотип"></a>
     </div>
 
-    <div class="contacts-mobile" id="mobile-menu">
-        <ul class="phones">
-            <li><a href="tel:+375173997637">+375 (17) 399-76-37</a></li>
-            <li><a href="tel:+375293454334">+375 (29) 345-43-34</a></li>
-        </ul>
+    <!--<div class="contacts-mobile" id="mobile-menu">-->
+        <!--<ul class="phones">-->
+            <!--<li><a href="tel:+375173997637">+375 (17) 399-76-37</a></li>-->
+            <!--<li><a href="tel:+375293454334">+375 (29) 345-43-34</a></li>-->
+        <!--</ul>-->
 
-        <div class="mail">
-            <a href="#">prof-sit@mail.ru</a>
-        </div>
-    </div>
+        <!--<div class="mail">-->
+            <!--<a href="#">prof-sit@mail.ru</a>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="menu" id="menu">
         <ul>
@@ -84,18 +90,18 @@
 </header>
 
 <section class="promo">
-    <div class="content">
+    <div class="content animated lightSpeedIn delay-1s">
         <h3>
             Собственное производство труб<br>
-            в весьма усиленной изоляции
+            в весьма усиленной изоляции по ГОСТ 9.602-2005
         </h3>
 
         <p>
-            Производим изделия соответствующие ГОСТ.<br>
+            Производим изделия соответствующие ГОСТ 9.602-2005 по TY(by) 192-801875.001-2017<br>
             На наших складах содержится только сертифицированный товар.
         </p>
 
-        <a href="#">Заказать звонок</a>
+        <a id="promoBtn">Заказать звонок</a>
     </div>
 </section>
 
@@ -331,7 +337,7 @@
     <section class="unikor" id="unikor">
         <div class="content">
             <div class="text" id="unikorText">
-                <h2>Внутренняя изоляция Уникор</h2>
+                <h2>Изоляция Уникор</h2>
                 <ul>
                     <li>
                         Грунтовка - модификатор ржавчины "Уникор РБ" - эффективная защита от коррозии.
@@ -346,7 +352,8 @@
                         может изменяться по желанию заказачика. Расход составляет 90-120 г/м2. Наносят в один слой кистью,
                         валиком,пневаматическиим или безвоздцушным распылителем при температуре не ниже 10градусов.
                         Время высыхания при температуре 20 градусов и отностиельной влажности 65+-5 - 1 час,
-                        при температуре плюс 90 гардусов - 15-20 минут.
+                        при температуре плюс 90 гардусов - 15-20 минут. Применяется как для хозяйственного так и холодного
+                        водоснабжения, имеет гигиеническое удостоверение.
                     </li>
                     <li>
                         Цвета Уникора: красно- коричневый, серый, черный, синий, зеленый, желтый.
@@ -377,7 +384,6 @@
                 является основной задачей нашего производства.
                 Нанесение наружной защиты труб способом весьма усиленной изоляции (ВУС)
                 позволяет продлить долговечность трубопровода.
-                Срок безаварийной эксплуатации такой магистрали увеличивается до 30 лет.
             </p>
 
             <p>
@@ -447,19 +453,19 @@
     <div class="container">
         <h2>Наши клиенты</h2>
         <div class="content">
-            <a href="#">
+            <a>
                 <div>
                     <img src="images\client-one.png" alt="client">
                 </div>
             </a>
 
-            <a href="#">
+            <a>
                 <div>
                     <img src="images\client-two.png" alt="client">
                 </div>
             </a>
 
-            <a href="#">
+            <a>
                 <div>
                     <img src="images\client-three.png" alt="client">
                 </div>
@@ -606,21 +612,30 @@
 
 <div class="pop" id="pop">
     <div class="content">
-        <form action="">
-            <label for="">
-                <input type="text" name="nameOrder">
+        <form action="headerForm">
+            <label for="nameHeaderName">
+                <span>Ваше имя</span>
+                <input type="text" name="name" id="nameHeaderName" required>
             </label>
 
-            <label for="">
-                <input type="text" name="phoneOrder">
+            <label for="phoneHeaderName">
+                <span>Ваш телефон</span>
+                <input type="text" name="phone" id="phoneHeaderName" required>
             </label>
 
-            <label for="">
-                <input type="text" name="mailOrder">
+            <label for="mailHeaderName">
+                <span>Ваша почта</span>
+                <input type="text" name="mail" id="mailHeaderName" required>
             </label>
 
-            <div>
-                <button>Заказать звонок</button>
+            <div class="buttons">
+                <div>
+                    <button id="back">Назад</button>
+                </div>
+
+                <div>
+                    <button type="submit" id="submit">Заказать звонок</button>
+                </div>
             </div>
         </form>
     </div>
